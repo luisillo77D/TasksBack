@@ -61,6 +61,7 @@ export const updateTaskStatus = async (req, res) => {
     const { status } = req.body;
     try {
         const task = await Task.findByIdAndUpdate(id, { status });
+        task.status = status;
         res.json(task);
     } catch (error) {
         res.status(500).json({ message: error.message });
