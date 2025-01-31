@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin: ["http://localhost:5173","https://prueba-vue-beta.vercel.app/"],
+        origin: "*",
         credentials: true,
     }
 ));
