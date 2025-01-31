@@ -11,7 +11,6 @@ app.use(cors(
     {
         origin: ["http://localhost:5173","https://prueba-vue-beta.vercel.app"],
         credentials: true,
-        sameSite: "none"
     }
 ));
 app.use(cookieParser());

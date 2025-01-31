@@ -56,7 +56,9 @@ export const login = async (req, res) => {
 
 export const logout =  (req, res) =>{
   res.cookie('token',"",{
-    expires: new Date(0)
+    expires: new Date(0),
+    sameSite: 'none',
+    secure: true
   })
   return res.sendStatus(200)
 }
